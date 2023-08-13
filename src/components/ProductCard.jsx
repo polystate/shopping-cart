@@ -1,12 +1,13 @@
-function ProductCard() {
+function ProductCard({title, price, imageURL, description, rating}) {
   return (
     <div className="productCard">
-        
-        <h3>Tailored Jeans</h3>
-        <img className="productImage" src="/checkout.jpg" alt="product description" />
-        <p className="productPrice">$19.99</p>
-        <p>Some text about jeans...</p>
+        <h2 className="productTitle">{title || "Default Product"}</h2>
+        <img className="productImage" src={imageURL} alt="product description" />
+        <p className="productPrice"><strong>${price}</strong></p>
+        <p>{description}</p>
+        <p className="rating">Rated: <strong>{rating.rate}</strong></p>
         <div className="btnContainer">
+        
         <button>Add to Cart</button>
         </div>
     </div>
