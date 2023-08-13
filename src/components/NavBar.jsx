@@ -6,7 +6,9 @@ function NavBar() {
        <span className="material-symbols-outlined">
         shopping_cart
         </span>
-        <h1>Cartmon</h1>
+        <h1>Cartmon
+            Services
+        </h1>
        </div>
        <ul>
         <li>Home</li>

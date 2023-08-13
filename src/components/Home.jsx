@@ -3,7 +3,7 @@ function Home() {
     <>
     <section className="intro">
         <h2>Welcome to Cartmon Online!</h2>
-        <img src="#" alt="some image" />
+        <img className="homeImage" src="/intro.jpg" alt="Cart" />
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vel, cum officiis id dignissimos asperiores!</p>
         
     </section>
@@ -15,27 +15,26 @@ function Home() {
                 <li>Service 2</li>
                 <li>Service 3</li>
             </ol>
-            <img src="#" alt="another image" />
+            <img className="homeImage" src="/checkout.jpg" alt="another image" />
         </section>
         <section className="services">
             <h2>Previous</h2>
             <ol>
-                <li>Service 1</li>
-                <li>Service 2</li>
-                <li>Service 3</li>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
             </ol>
-            <img src="#" alt="another image" />
+            <img className="homeImage" src="/checkout.jpg" alt="another image" />
         </section>
     </section>
     <section className="writeToUs">
-        <h2>Write to Us</h2>
         <form>
-            <input type="text" />
+            <textarea className="userInput" rows="4" cols="4" placeholder="Write to us..."></textarea>
             <hr />
             <div className="btnContainer">
-                <button type="submit">Submit</button>
-                <button type="submit">Edit</button>
-                <button type="submit">Reset</button>
+                <button onClick={(e) => e.preventDefault()} type="submit">Submit</button>
+                <button onClick={(e) => e.preventDefault()} type="submit">Edit</button>
+                <button onClick={(e) => e.preventDefault()} type="submit">Reset</button>
             </div>
             </form>
     </section>
