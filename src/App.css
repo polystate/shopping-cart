@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --main-spacing: 1rem;
+  --font-size: 10px;
+}
+
+
+body, #root{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: var(--main-spacing);
+}
+
+header{
+  border: 1px solid black;
+}
+
+nav{
+  border: 1px solid black;
+  padding: var(--main-spacing);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--main-spacing);
+}
+
+.branding{
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav h1, .material-symbols-outlined{
+  font-size: calc(var(--font-size) + 4px);
+  padding: var(--main-spacing);
+}
+
+.material-symbols-outlined{
+  font-size: calc(var(--font-size)*2);
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  gap: var(--main-spacing);
+}
+
+ul li{
+  font-size: calc(var(--font-size) + 2px);
+  margin-right: calc(var(--main-spacing)/2);
+}
+
+main{
+  border: 1px solid black;
+  height: 75vh;
+  padding: var(--main-spacing);
+  display: flex;
+  flex-direction: column;
+  gap: var(--main-spacing);
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main h2{
+  font-size: calc(var(--font-size)*2);
+}
+
+.intro, .services, .writeToUs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: calc(var(--main-spacing));
+  max-width: 90%;
+}
+
+.intermediary{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--main-spacing);
+}
+
+.writeToUs{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--main-spacing);
+}
+
+.btnContainer{
+  display: flex;
+  gap: var(--main-spacing);
+  margin-top: var(--main-spacing);
+  justify-content: center;
+}
+
+form, input{
+  border: 1px solid black;
+  width: 100%;
+}
+
+button{
+  padding: calc(var(--main-spacing)/2);
+  margin: var(--main-spacing);
+  border: none;
+}
+
+footer{
+  flex-grow: 1;
+  border: 1px solid black;
+}
