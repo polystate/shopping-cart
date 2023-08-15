@@ -12,6 +12,7 @@
     --font-size: 10px;
     --line-height: 1.6;
     --max-width: 90%;
+    --primary: green;
   }
 }
 
@@ -37,6 +38,7 @@ nav{
   justify-content: space-between;
   align-items: center;
   gap: var(--main-spacing);
+  color: var(--primary);
 }
 
 .branding{
@@ -50,11 +52,40 @@ nav{
 nav h1, .material-symbols-outlined{
   font-size: calc(var(--font-size) + 4px);
   padding: var(--main-spacing);
+  color: var(--primary);
 }
 
 .material-symbols-outlined{
   font-size: calc(var(--font-size)*2);
+  position: relative;
 }
+
+.cart-badge {
+  position: absolute;
+  right: 3px;
+  top: 7px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 50%;
+  padding: 2.5px 5px;
+  font-size: var(--font-size);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  animation: bounce 1.5s infinite;
+}
+
+/* @keyframes bounce {
+  0%, 100% {
+    transform: translateY(-1px);
+    background: darkred;
+  }
+  50% {
+    transform: translateY(-3px);
+    background: green;
+  }
+} */
+
+
+
 
 ul{
   list-style: none;
@@ -100,9 +131,21 @@ main h2{
   line-height: var(--line-height);
 }
 
+.navLink{
+  text-decoration: none;
+  color: black;
+}
+
+.navLink:hover{
+  font-weight: 600;
+  color: var(--primary);
+}
+
 /* p, ul, li{
   line-height: var(--line-height);
 } */
+
+
 
 .intermediary{
   display: flex;
@@ -166,6 +209,7 @@ footer{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: var(--primary);
 }
 
 .copy{
@@ -200,18 +244,18 @@ footer{
 .productCard {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: calc(var(--max-width)/2);
-  /* height: 35%; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   margin: var(--main-spacing) 0 0 0;
+  padding: var(--main-spacing);
+  text-align: center;
 }
 
 .productTitle{
-  color: green;
+  color: var(--primary);
   font-size: calc(var(--font-size)*1.25);
-  
 }
 
 .productCard h3, p{
@@ -220,7 +264,7 @@ footer{
 }
 
 .productImage{
-  width: 25%;
+  width: 35%;
   margin-top: var(--main-spacing);
 }
 
@@ -229,15 +273,60 @@ footer{
   font-size: var(--font-size);
 }
 
+.productDescription{
+  /* padding: var(--main-spacing); */
+  line-height: 1.6
+}
+
+.quantitySelector{
+  border: 1px solid lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--main-spacing);
+  margin-top: var(--main-spacing);
+}
+
+.numberPad{
+  display: flex;
+  justify-content: center;
+  gap: calc(var(--main-spacing)/2);
+  color: var(--primary);
+}
+
+.chooseQuantity{
+   border: 1px solid var(--primary);
+   background: var(--primary);
+   color: white;
+   height: 1rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: calc(var(--main-spacing)/2);
+
+}
+
+.quantitySelector label{
+  font-size: calc(var(--font-size)*1.5);
+  padding: calc(var(--main-spacing)/2);
+  color: green;
+}
+
+.quantitySelector input{
+  width: 45%;
+  /* margin-bottom: calc(var(--main-spacing)/2); */
+  margin-bottom: var(--main-spacing);
+}
+
 .productCard button {
   border: none;
   outline: 0;
-  padding: 8px;
+  /* padding: 8px; */
   color: white;
   background-color: #000;
   border-radius: 5px;
   cursor: pointer;
-  /* width: 50%; */
   font-size: var(--font-size);
   font-family: 'Courier New', Courier, monospace, sans-serif, serif;
 }
