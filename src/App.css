@@ -84,9 +84,6 @@ nav h1, .material-symbols-outlined{
   }
 } */
 
-
-
-
 ul{
   list-style: none;
   display: flex;
@@ -140,12 +137,6 @@ main h2{
   font-weight: 600;
   color: var(--primary);
 }
-
-/* p, ul, li{
-  line-height: var(--line-height);
-} */
-
-
 
 .intermediary{
   display: flex;
@@ -310,19 +301,17 @@ footer{
 .quantitySelector label{
   font-size: calc(var(--font-size)*1.5);
   padding: calc(var(--main-spacing)/2);
-  color: green;
+  color: var(--primary);
 }
 
 .quantitySelector input{
   width: 45%;
-  /* margin-bottom: calc(var(--main-spacing)/2); */
   margin-bottom: var(--main-spacing);
 }
 
 .productCard button {
   border: none;
   outline: 0;
-  /* padding: 8px; */
   color: white;
   background-color: #000;
   border-radius: 5px;
@@ -333,6 +322,40 @@ footer{
 
 .productCard button:hover {
   opacity: 0.7;
+}
+
+.checkoutContent {
+  padding: var(--main-spacing);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.checkoutContent h6, img{
+  margin-top: var(--main-spacing);
+  width: 40%;
+}
+
+.productCheckout{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--main-spacing);
+  max-width: 75%;
+  text-align: center;
+}
+
+.productCheckout aside, h2{
+  margin-top: var(--main-spacing);
+  color: var(--primary);
+}
+
+.emptyCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--main-spacing);
 }
 
 

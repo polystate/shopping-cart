@@ -3,7 +3,8 @@ import { useState } from 'react'
 function ProductCard({title, price, imageURL, description, rating, userCart, setUserCart}) {
   const [quantity, setQuantity] = useState(1);
 
-  const addToCart = () => {
+  const addToCart = (e) => {
+    e.preventDefault();
     setUserCart([...userCart, {title: title, price: price, imageURL: imageURL, quantity: quantity}])
   }
 
