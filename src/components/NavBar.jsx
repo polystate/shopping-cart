@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 
 function NavBar( { userCart } ) {
-  // const cartItemsCount = userCart.length;
-
   const totalQuantity = userCart.reduce((sum, item) => sum + item.quantity, 0);
 
   return (

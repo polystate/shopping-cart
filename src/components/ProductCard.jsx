@@ -1,11 +1,25 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 function ProductCard({title, price, imageURL, description, rating, userCart, setUserCart}) {
   const [quantity, setQuantity] = useState(1);
 
   const addToCart = (e) => {
     e.preventDefault();
-    setUserCart([...userCart, {title: title, price: price, imageURL: imageURL, quantity: quantity}])
+    const existingIndex = userCart.findIndex(item => item.title === title);
+
+    if(existingIndex !== -1){
+      const updatedCart = [...userCart];
+      updatedCart[existingIndex].quantity += quantity;
+      setUserCart(updatedCart);
+    } else {
+      setUserCart([...userCart, {title: title, price: price, imageURL: imageURL, quantity: quantity}])
+    }
+  }
+
+  const removeFromCart = (e) => {
+    e.preventDefault();
+    const updatedCart = userCart.filter((item) => item.title !== title);
+    setUserCart(updatedCart);
   }
 
   const handleQuantityChange = (e) => {
@@ -30,10 +44,11 @@ function ProductCard({title, price, imageURL, description, rating, userCart, set
           </div>
         </div>
         <div className="btnContainer">
-        <button onClick={addToCart}>Add to Cart</button>
+        <button className="productButton" onClick={addToCart}>Add to Cart</button>
+        <button className="productButton" onClick={removeFromCart}>Remove from Cart</button>
         </div>
     </div>
   )
 }
 
-export default ProductCard
+export default ProductCard;
