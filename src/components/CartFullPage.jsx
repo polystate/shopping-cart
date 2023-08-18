@@ -4,7 +4,7 @@ function CartFullPage( { userCart }) {
       }, 0).toFixed(2);
 
   return (
-    <section className="productPage">
+    <section className="productPage checkout">
       <h2>Product Checkout</h2>
       {userCart.map((item) => (
         <div key={self.crypto.randomUUID()} className="productCheckout">
