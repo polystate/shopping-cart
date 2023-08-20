@@ -1,4 +1,19 @@
+import { useState } from 'react'
+
 function Home() {
+  const [inputText, setInputText] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted with input:', inputText);
+    setInputText('');
+  }
+
+  const resetInput = (e) => {
+    e.preventDefault();
+    setInputText('');
+  } 
+
   return (
     <>
     <section className="intro">
@@ -12,7 +27,7 @@ function Home() {
     </section>
     <section className="intermediary">
         <section className="services">
-            <h2>Services</h2>
+            <h2 id="services-header">Services</h2>
             <ol>
                 <li>FakeStore API</li>
                 <li>Immediate Checkout</li>
@@ -29,15 +44,14 @@ function Home() {
         </section>
     </section>
     <section className="writeToUs">
-        <form>
-            <textarea className="userInput" rows="4" cols="4" placeholder="Write to us..."></textarea>
+        <form onSubmit={handleSubmit}>
+            <textarea className="userInput" rows="4" cols="4" placeholder="Write to us..." value={inputText} onChange={(e) => setInputText(e.target.value)}></textarea>
             <hr />
             <div className="btnContainer formButtons">
-                <button className="formButton" onClick={(e) => e.preventDefault()} type="submit">Submit</button>
-                <button className="formButton" onClick={(e) => e.preventDefault()} type="submit">Edit</button>
-                <button className="formButton" onClick={(e) => e.preventDefault()} type="submit">Reset</button>
+                <button className="formButton" type="submit">Submit</button>
+                <button className="formButton" onClick={resetInput} type="button">Reset</button>
             </div>
-            </form>
+        </form>
     </section>
     </>
   )

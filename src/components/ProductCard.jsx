@@ -44,8 +44,8 @@ function ProductCard({title, price, imageURL, description, rating, userCart, set
           </div>
         </div>
         <div className="btnContainer">
-        <button className="productButton" onClick={addToCart}>Add to Cart</button>
-        <button className="productButton" onClick={removeFromCart}>Remove from Cart</button>
+        <button id="addCart" className="productButton" onClick={addToCart}>Add to Cart</button>
+        <button id="removeCart" className="productButton" onClick={removeFromCart}>Remove All From Cart</button>
         </div>
     </div>
   )
