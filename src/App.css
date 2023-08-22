@@ -215,7 +215,6 @@ main h2{
 
 .formButton:hover{
   opacity: 0.85;
-  transform: translateY(-5px);
 }
 
 .formButton:active{
