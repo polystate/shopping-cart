@@ -23,9 +23,9 @@ This project is a responsive shopping cart application built using React. It fet
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/react-shopping-cart.git
+git clone https://github.com/your-username/shopping-cart.git
 
-cd react-shopping-cart
+cd shopping-cart
 
 npm start
 ```
