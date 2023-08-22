@@ -20,7 +20,7 @@ function Home() {
         <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to <br /> 
             Cartmon Services!</h2>
         
-        <img className="homeImage" src="/intro.jpg" alt="Cart" />
+        <img className="homeImage" src="../public/images/intro.jpg" alt="Cart" />
         
         <p className="imageText">Your one stop hub for easy and convenient e-commerce!</p>
         
