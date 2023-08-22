@@ -46,7 +46,7 @@ function Home() {
     <section className="writeToUs">
         <form onSubmit={handleSubmit}>
             <textarea className="userInput" rows="4" cols="4" placeholder="Write to us..." value={inputText} onChange={(e) => setInputText(e.target.value)}></textarea>
-            <hr />
+            {/* <hr /> */}
             <div className="btnContainer formButtons">
                 <button className="formButton" type="submit">Submit</button>
                 <button className="formButton" onClick={resetInput} type="button">Reset</button>

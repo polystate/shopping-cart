@@ -180,17 +180,16 @@ main h2{
   resize: none;
   outline: none;
   border: none;
-}
-
-.userInput {
   padding: calc(var(--main-spacing) / 2);
   font-size: var(--font-size);
   color: var(--border-col);
+  font-family: inherit;
+  color: green;
+  
 }
 
 .userInput::placeholder{
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: calc(var(--font-size)*1.75);
+  color: green;
 }
 
 .btnContainer{
@@ -198,6 +197,8 @@ main h2{
   margin: var(--main-spacing) 0 var(--main-spacing) 0;
   justify-content: space-around;
   /* background: #333; */
+  border-top: 1px solid rgb(233, 233, 233);
+  display: flex;
 }
 
 .formButton{
@@ -208,10 +209,18 @@ main h2{
   padding: calc(var(--main-spacing)/1.25);
   margin: var(--main-spacing);
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  cursor: pointer;
+  transition: transform .5s ease;
 }
 
 .formButton:hover{
-  font-weight: 700;
+  opacity: 0.85;
+  transform: translateY(-5px);
+}
+
+.formButton:active{
+  transform: translateY(5px);
+  /* background: green; */
 }
 
 form{
@@ -408,13 +417,25 @@ footer{
 
 .emptyContainer > h2{
   margin: 0 auto;
-  /* margin-right: calc(var(--main-spacing)); */
 }
 
 .emptyCart {
   margin-bottom: 4rem;
   display: block;
   height: 40%;
+}
+
+.copy{
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size);
+  /* margin: 0 auto; */
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media(max-width: 280px){
@@ -435,7 +456,6 @@ footer{
   nav{
     width: 100%;
   }
-  
 }
 
 @media(max-width: 376px){
@@ -461,6 +481,16 @@ footer{
   #removeCart{
     margin-left: 5px;
     
+  }
+  footer{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  .copy{
+    position: relative;
+    left: 12px;
+    top: 5px;
   }
 }
 
@@ -502,6 +532,13 @@ footer{
   .homeImage{
     max-width: 50%;
   }
+
+  footer{
+    display: flex;
+    justify-content: left;
+  }
+
+  
 }
 
 @media(min-width: 750px){
@@ -522,7 +559,8 @@ footer{
   }
 
   .copy{
-    margin-left: calc(var(--main-spacing)*6);
+    margin-left: calc(var(--main-spacing)*5);
+    margin-top: 10px;
   }
 
   .productCard > .btnContainer{
@@ -542,7 +580,24 @@ footer{
   .homeImage{
     max-width: 50%;
   }
+
+  footer{
+    display: flex;
+    justify-content: left;
+  }
 }
+
+@media(min-width: 850px){
+  footer{
+    display: flex;
+    justify-content: center;
+  }
+  .copy{
+    margin: 0;
+    margin-bottom: 5px;
+  }
+}
+
 
 @media(min-width: 1060px){
   :root{
@@ -631,6 +686,12 @@ footer{
 
   .copy{
     display: flex;
-    margin-right: 220px;
+    flex-direction: row;
+    margin-right: var(--main-spacing) - 1;
+  }
+
+  .copy .copy-text:first-child::after{
+    content: "-";
+    margin: 0 10px;
   }
 }

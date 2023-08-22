@@ -15,8 +15,9 @@ function CartFullPage( { userCart }) {
         </div>
       ))}
       <div className="totalPayment">
-      <h2>Total Cost: ${totalCost}</h2>
+      
       </div>
+      <h2>Total Cost: ${totalCost}</h2>
     </section>
   )
 }
